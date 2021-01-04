@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<style media="screen">
+  body{
+    float: left;
+    background: #4bffbc;
+    text-align: center;
+    font-family: Laila;
+    color: black;
+    font-size: 22px;
+  }
+  .box{
+    float: left;
+    padding: 30px 500px 0px 450px;
+  }
+  .grid-container
+  {
+    display: grid;
+    float: left;
+    grid-template-columns: 140px 140px 140px;
+    grid-template-rows: 140px 140px 140px;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+  input{
+    float: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 36px;
+    padding: 40px 20px 20px 20px;
+    font-size: 60px;
+    color: #7800ef;
+    font-family: Josefin Sans;
+    text-transform: uppercase;
+    text-align: center;
+    height: 80px;
+    width: 100px;
+    margin: 0px 500px 0px 0px;
+  }
+  input:focus{
+    outline: none;
+  }
+  #but
+  {
+    box-sizing: border-box;
+    width: 95px;
+    height: 40px;
+    margin: 30px 0 20px 160px;
+    border-radius: 20px;
+    float: left;
+    height: 50px;
+    width: 120px;
+    color: #000200;
+    font-family: Josefin Sans;
+    font-size: 20px;
+    cursor: pointer;
+    background: #3af600;
+  }
+  #but:focus{
+    outline: none;
+  }
+  :root {
+    --penguin-size: 300px;
+    --penguin-skin: black;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+  @media (max-width: 350px) {
+    :root {
+      -penguin-size: 200px;
+      --penguin-skin: black;
+    }
+  }
+  .penguin {
+    position: absolute;
+    float: left;
+    display: block;
+    margin-top: 15%;
+    margin-left: 10%;
+    width: var(--penguin-size, 300px);
+    height: var(--penguin-size, 300px);
+  }
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin,black);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, black);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+
+  .right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 3s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      }
+      40% {
+        transform: rotate(130deg);
+      }
+    }
+
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .sparkle {
+    top: 25%;
+    left:-23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+  .penguin * {
+    position: absolute;
+  }
+</style>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <h2 id="print"></h2>
+  <script type="text/javascript" src="script.js"></script>
+  <div class="box">
+    <div class="grid-container">
+      <div class="grid-item"><input type="text" id="b1" maxlength="1" onclick="myfunc_3();myfunc();" readonly></div>
+      <div class="grid-item"><input type="text" id="b2" maxlength="1" onclick="myfunc_4();myfunc();" readonly></div>
+      <div class="grid-item"><input type="text" id="b3" maxlength="1" onclick="myfunc_5();myfunc();" readonly></div>
+      <div class="grid-item"><input type="text" id="b4" maxlength="1" onclick="myfunc_6();myfunc();" readonly></div>
+      <div class="grid-item"><input type="text" id="b5" maxlength="1" onclick="myfunc_7();myfunc();" readonly></div>
+      <div class="grid-item"><input type="text" id="b6" maxlength="1" onclick="myfunc_8();myfunc();" readonly></div>
+      <div class="grid-item"><input type="text" id="b7" maxlength="1" onclick="myfunc_9();myfunc();" readonly></div>
+      <div class="grid-item"><input type="text" id="b8" maxlength="1" onclick="myfunc_10();myfunc();" readonly></div>
+      <div class="grid-item"><input type="text" id="b9" maxlength="1" onclick="myfunc_11();myfunc();" readonly></div>
+    </div>
+      <button id="but" onclick="myfunc_2()">RESET</button>
+  </div>
+  <div class="penguin">
+    <div class="penguin-bottom">
+      <div class="right-hand"></div>
+      <div class="left-hand"></div>
+      <div class="right-feet"></div>
+      <div class="left-feet"></div>
+    </div>
+    <div class="penguin-top">
+      <div class="right-cheek"></div>
+      <div class="left-cheek"></div>
+      <div class="belly"></div>
+      <div class="right-eye">
+        <div class="sparkle"></div>
+      </div>
+      <div class="left-eye">
+        <div class="sparkle"></div>
+      </div>
+      <div class="blush-right"></div>
+      <div class="blush-left"></div>
+      <div class="beak-top"></div>
+      <div class="beak-bottom"></div>
+    </div>
+  </div>
+  </body>
+</html>
