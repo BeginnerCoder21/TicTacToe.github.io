@@ -5,6 +5,7 @@ function players()
   if((p1==" "||p1=="")||(p2=="" || p2==" "))
   {
     alert("Please enter names first !!!");
+    return false;
   }
   else {
     alert(p1+" will start with X and \r\n"+p2+" will start with O");
